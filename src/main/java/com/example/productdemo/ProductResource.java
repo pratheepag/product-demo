@@ -3,17 +3,17 @@ package com.example.productdemo;
 import java.util.HashMap;
 import java.util.Map;
 
-import javax.websocket.server.PathParam;
 import javax.ws.rs.GET;
 import javax.ws.rs.POST;
 import javax.ws.rs.Path;
+import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.Response;
 
 import com.example.productdemo.model.Product;
 
 @Path("products")
-@Produces("text/xml")
+@Produces("application/json")
 public class ProductResource {
     
     private Map<Integer, Product> products = new HashMap<>() {{
